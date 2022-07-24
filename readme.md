@@ -25,7 +25,7 @@ LONG="LONGITUDE HERE"
 set a cronjob like following:
 
 ```
-0,20,40 * * * * cd /path/to/folder & node run.js
+0,20,40 * * * * cd /path/to/folder && node run.js
 ```
 
 and that should be it!
