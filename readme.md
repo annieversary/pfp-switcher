@@ -1,6 +1,6 @@
 # pleroma pfp switcher
 
-this is a small thing that will change your profile picture according to sunrise and sunset, within 30 minutes of it happening
+this is a small thing that will change your profile picture according to sunrise and sunset, within 20 minutes
 
 this probably will work on mastodon with some changes, but i dont know much about the mastodon api
 
