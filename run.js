@@ -46,8 +46,6 @@ async function main() {
         sunrise = moment(d.data.results.sunrise),
         sunset = moment(d.data.results.sunset);
 
-    sunset = moment().add(-5, 'minutes');
-
     if (sunrise < time && time < sunrise.add(21, 'minutes')) {
         console.log('changing to day pic');
         change("./day.png");
