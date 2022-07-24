@@ -1,6 +1,8 @@
-# pfp-switcher
+# pleroma pfp switcher
 
 this is a small thing that will change your profile picture according to sunrise and sunset, within 30 minutes of it happening
+
+this probably will work on mastodon with some changes, but i dont know much about the mastodon api
 
 ## running
 
@@ -13,7 +15,7 @@ run `npm i`
 create a `.env` file, and add the following:
 
 ```
-INSTANCE="YOUR INSTANCE URL HERE" # eg: https://example.com
+INSTANCE="YOUR PLEROMA INSTANCE URL HERE" # eg: https://example.com
 COOKIE="YOUR PLEROMA COOKIE HERE" # you can get this with the devtools
 # your current position
 LAT="LATITUDE HERE"
