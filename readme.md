@@ -1,25 +1,33 @@
-# pleroma pfp switcher
+# pfp switcher
 
 this is a small thing that will change your profile picture according to sunrise and sunset, within 20 minutes
 
-this probably will work on mastodon with some changes, but i dont know much about the mastodon api
+only supports pleroma and twitter
 
 ## running
 
 clone the repo
-
-add `day.png` and `night.png` images
 
 run `npm i`
 
 create a `.env` file, and add the following:
 
 ```
-INSTANCE="YOUR PLEROMA INSTANCE URL HERE" # eg: https://example.com
-COOKIE="YOUR PLEROMA COOKIE HERE" # you can get this with the devtools
+DAY_IMG="path/to/day/image.png"
+NIGHT_IMG="path/to/night/image.png"
+
 # your current position
 LAT="LATITUDE HERE"
 LONG="LONGITUDE HERE"
+
+PLEROMA_INSTANCE="" # eg: https://example.com
+PLEROMA_COOKIE="" # you can get this with the devtools
+
+# twitter details for an app with 1.1 access
+TWITTER_API_KEY=""
+TWITTER_API_SECRET=""
+TWITTER_API_TOKEN=""
+TWITTER_API_TOKEN_SECRET=""
 ```
 
 set a cronjob like following:

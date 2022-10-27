@@ -12,6 +12,7 @@
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "form-data": "^4.0.0",
-    "moment": "^2.29.4"
+    "moment": "^2.29.4",
+    "twitter-api-client": "^1.6.1"
   }
 }
