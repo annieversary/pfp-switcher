@@ -19,11 +19,10 @@ const twitter = new TwitterClient({
 const lat = process.env.LAT;
 const long = process.env.LONG;
 
-function change(img) {
-    const avatar = fs.createReadStream(img);
-
+function change(twitter_img, pleroma_img) {
     // PLEROMA
 
+    const avatar = fs.createReadStream(pleroma_img);
     const form = new FormData();
     form.append("avatar", avatar);
 
@@ -48,7 +47,7 @@ function change(img) {
 
     // TWITTER
 
-    const image = fs.readFileSync(img, {encoding: 'base64'});
+    const image = fs.readFileSync(twitter_img, {encoding: 'base64'});
     twitter.accountsAndUsers.accountUpdateProfileImage({
         image,
     })
@@ -73,12 +72,12 @@ async function main() {
 
     if (sunrise < time && time < sunrise.add(21, 'minutes')) {
         console.log('changing to day pic');
-        change(process.env.DAY_IMG);
+        change(process.env.DAY_TWITTER, process.env.DAY_PLEROMA);
     }
 
     if (sunset < time && time < sunset.add(21, 'minutes')) {
         console.log('changing to night pic');
-        change(process.env.NIGHT_IMG);
+        change(process.env.NIGHT_TWITTER, process.env.NIGHT_PLEROMA);
     }
 }
 
